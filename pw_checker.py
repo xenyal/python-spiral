@@ -1,19 +1,6 @@
 import check
 import math
 
-## Question 1 
-
-## password_check(password) produces False and prints a message if password
-## violates one of the basic password rules; it produces a score and the 
-## strenght of the password as a string if password does not violate one 
-## of the basic rules.
-## Effects: Prints a message if password violates a rule.
-## password_check: Str -> (Anyof False Str)
-## Examples:
-## * password_check("") => False and the following is printed:
-## The password ("") failed a basic test
-## * password_check("Aaaa123") => "0:weak"
-
 def password_check(password):
     # Determine the number of digits, lowercase characters, uppercase characters
     # in password (the remaining characters are 'special')
@@ -45,6 +32,3 @@ def password_check(password):
                 return str(score)+":"+"medium"
             else:
                 return str(score)+":"+"weak"
-
-# Test examples given on the assignment
-check.expect("password_check: Xy 37 1-0", password_check("Xy 37 1-0"), "35:medium")
